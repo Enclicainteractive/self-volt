@@ -1,0 +1,53 @@
+{
+  "server": {
+    "name": "My Self-Volt Server",
+    "port": 3001,
+    "cors": {
+      "enabled": true,
+      "origins": ["*"]
+    }
+  },
+  "storage": {
+    "type": "json",
+    "json": {
+      "directory": "./data",
+      "prettyPrint": true
+    },
+    "database": {
+      "type": "sqlite",
+      "filename": "./data/volt.db"
+    }
+  },
+  "mainServer": {
+    "url": "",
+    "apiKey": "",
+    "autoPing": true,
+    "pingInterval": 60000
+  },
+  "encryption": {
+    "enabled": true,
+    "defaultAlgorithm": "AES-256-GCM"
+  },
+  "voice": {
+    "enabled": true,
+    "bitrate": 64000,
+    "maxUsersPerChannel": 25
+  },
+  "files": {
+    "enabled": true,
+    "maxFileSize": 10485760,
+    "allowedTypes": ["image/*", "video/*", "audio/*", ".pdf", ".doc", ".docx", ".txt"],
+    "storage": "local",
+    "localPath": "./uploads"
+  },
+  "limits": {
+    "maxServers": 100,
+    "maxMembersPerServer": 10000,
+    "maxChannelsPerServer": 500,
+    "maxMessagesPerChannel": 50000
+  },
+  "logging": {
+    "level": "info",
+    "file": "./logs/volt.log"
+  }
+}
